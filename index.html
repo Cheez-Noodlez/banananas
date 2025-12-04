@@ -106,40 +106,7 @@
         
         /* Removed .peeking-banana CSS */
 
-        /* --- PRINT STYLES --- */
-        @media print {
-            /* Hide the fixed navigation bar and menu elements */
-            nav.fixed, #side-menu, #menu-overlay, #menu-button, #search-input {
-                display: none !important;
-            }
-            /* Remove background/shadows on main content for paper printing */
-            #main-content-wrapper {
-                background-color: transparent !important;
-                box-shadow: none !important;
-                border: none !important;
-                overflow: visible !important; /* Ensure all content is printed */
-                height: auto !important;
-            }
-            /* Reset body styles for print */
-            body {
-                padding: 0 !important;
-                background-color: white !important; 
-                color: black !important;
-            }
-            /* Adjust colors for high contrast printing */
-            .text-accent-gold {
-                color: #000 !important; /* Black */
-            }
-            .text-gray-200 {
-                 color: #333 !important; /* Dark Gray */
-            }
-            .text-accent-cyan {
-                color: #000080 !important; /* Dark Blue for Cyan elements */
-            }
-            .text-cyan-100\/70 {
-                color: #555 !important;
-            }
-        }
+        /* --- PRINT STYLES WERE HERE --- */
     </style>
     <script>
         tailwind.config = {
@@ -174,7 +141,7 @@
         <h3 class="text-3xl font-bold text-accent-gold mb-8">Navigation Index</h3>
         <ul class="space-y-4">
             <li><a href="#" class="text-white hover:text-accent-cyan transition duration-150 text-lg" onclick="showView('index'); toggleMenu()">Homepage</a></li>
-            <li><a href="#" class="text-white hover:text-accent-cyan transition duration-150 text-lg" onclick="showView('blank'); toggleMenu()">Blank Page</a></li>
+            <li><a href="#" class="text-white hover:text-accent-cyan transition duration-150 text-lg" onclick="showView('blank'); toggleMenu()">Survey and site identification</a></li>
         </ul>
     </div>
 
@@ -250,10 +217,11 @@
             <!-- Blank Page View (Hidden by default) -->
             <div id="blank-page-view" class="hidden w-full h-full flex flex-col items-center justify-center text-center">
                 <h3 class="text-3xl font-bold text-accent-gold mb-4">Current Location Acknowledged</h3>
-                <p class="text-xl text-white">You are in: <span class="text-accent-cyan font-mono">Sterling Heights, MI</span></p>
-                <p class="text-2xl mt-8 font-bold text-accent-cyan">Here are your Universal protocols</p>
-                 <li>  <p class="text-2xl mt-8 font-bold text-accent-cyan">Permits</p></li>
-                 <li>  <p class="text-2xl mt-8 font-bold text-accent-cyan">Controlled Digging</p></li>
+                <p class="text-xl text-white">You are in: <span class="text-accent-cyan font-mono">
+11911 Clinton River Rd, Sterling Heights, MI 48313
+</span></p>
+                <p class="text-2xl mt-8 font-bold text-accent-cyan">Here is a property map</p>
+
             </div>
             
             <!-- Minigame Views (REMOVED) -->
@@ -274,15 +242,7 @@
             <!-- Button Group -->
             <div class="flex items-center space-x-3">
                 
-                <!-- Print Button -->
-                <button onclick="window.print()" class="p-1 rounded-full text-accent-cyan hover:text-white hover:bg-protocol-blue/50 transition duration-150" title="Print Document">
-                    <!-- Printer Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
-                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-                        <rect x="6" y="14" width="12" height="8"></rect>
-                    </svg>
-                </button>
+                <!-- Print Button was here -->
 
                 <!-- Light/Dark Mode Button -->
                 <button id="mode-toggle-btn" onclick="toggleLightMode()" class="p-1 rounded-full text-accent-cyan hover:text-white hover:bg-protocol-blue/50 transition duration-150" title="Toggle Light/Dark Mode">
